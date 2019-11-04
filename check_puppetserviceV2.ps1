@@ -1,6 +1,6 @@
 $time = (Get-Date).ToString("ddMMyyyy-HHmm")
-if ((get-service evup).status -contains "Stopped" ) { 
-Start-Service EVUP
+if ((get-service puppet).status -contains "Stopped" ) { 
+Start-Service puppet
 $MyToken = (Get-Content c:\puppet\arquivos\tkn.txt)
 $chatID = -299517315
 $hostname = $env:COMPUTERNAME
